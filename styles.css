@@ -72,10 +72,13 @@ grid-template-columns: auto 1fr auto;
     padding: 0px 0px;
     height: 170px;
 }
-.logo-container{
-    margin-top: -70px;
-    height:280px ;
-    width: 380px;
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+     margin-top: -55px;
+      margin-left: 33px;
 }
 
 .logo {
@@ -280,4 +283,63 @@ background: var(--searchbar-bg);
 
 .home-button:hover {
     background-color: #0056b3;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo-icon-wrapper {
+    position: relative;
+}
+
+.logo-glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(244,63,94,0.2), rgba(245,158,11,0.2));
+    border-radius: 0.75rem;
+    filter: blur(8px);
+    transition: filter 0.5s ease;
+}
+
+.logo-link:hover .logo-glow {
+    filter: blur(16px);
+}
+
+.logo-box {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(to bottom right, #f43f5e, #f59e0b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.logo-text {
+    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.logo-text-white {
+    font-family: 'Dancing Script', cursive;
+    color: var(--text-color);
+}
+
+
+.logo-text-gradient {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    background: linear-gradient(to right, #be123c, #b45309, #e11d48);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
