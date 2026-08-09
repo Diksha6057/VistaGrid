@@ -1,0 +1,16 @@
+:root {
+    --base-color: black;
+    --text-color: white;
+    --button-bg: rgb(50, 50, 50);
+    --searchbar-bg: rgb(165, 163, 163);
+    --overlay-bg: rgba(0, 0, 0, 0.6);
+    --overlay-bg-hover: rgba(0, 0, 0, 0.8);
+}
+.darkmode {
+    --base-color: white;
+    --text-color: black;
+    --button-bg: rgb(200, 200, 200);
+    --searchbar-bg: rgb(220, 220, 220);
+    --overlay-bg: rgba(0, 0, 0, 0.6);
+    --overlay-bg-hover: rgba(0, 0, 0, 0.8);
+}
