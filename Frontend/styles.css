@@ -177,3 +177,17 @@ body {
     background: var(--searchbar-bg);
     cursor: pointer;
 }
+.pcontainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+    columns: 4;
+    column-gap: 38px;
+    padding: 40px 0;
+}
+@media (max-width: 1024px) {
+    .pcontainer { columns: 3; }
+}
+@media (max-width: 600px) {
+    .pcontainer { columns: 1; }
+}
