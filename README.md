@@ -26,15 +26,13 @@ It's built as a demonstration that a smooth, modern gallery UX — masonry layou
 
 **Discovery & browsing**
 - Responsive masonry grid (4 columns → 3 → 1 depending on viewport) using CSS columns, so images of any aspect ratio tile cleanly with no gaps.
-- Infinite scroll — new images load automatically as the user nears the bottom of the page, powered by an IntersectionObserver watching a sentinel element.
+- Infinite scroll — new images load automatically as the user nears the bottom of the page.
 - Random image feed on load, with duplicate-ID filtering so the same photo doesn't reappear as you scroll.
 
 **Search**
 - Keyword search against Unsplash's full photo library.
-- Paginated search results that keep loading via the same infinite-scroll mechanism once a search is active.
 
 **Viewing & sharing**
-- Click-to-expand lightbox modal for full-resolution viewing, closable via the "×" button, a click outside the image, or re-clicking.
 - One-click download button per image (fetches the full-resolution blob rather than just linking out).
 - Native share button using the Web Share API, with a graceful fallback alert on unsupported browsers.
 
