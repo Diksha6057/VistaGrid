@@ -2,7 +2,10 @@
 
 A framework-free image discovery website that turns the Unsplash photo library into a fast, infinitely scrollable, searchable masonry gallery — built end-to-end on vanilla HTML, CSS, and JavaScript.
 
-HTML5 CSS3 JavaScript (ES6+) Unsplash API
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Unsplash](https://img.shields.io/badge/Unsplash-000000?style=for-the-badge&logo=unsplash&logoColor=white)
 
 ## Table of Contents
 
@@ -23,15 +26,13 @@ It's built as a demonstration that a smooth, modern gallery UX — masonry layou
 
 **Discovery & browsing**
 - Responsive masonry grid (4 columns → 3 → 1 depending on viewport) using CSS columns, so images of any aspect ratio tile cleanly with no gaps.
-- Infinite scroll — new images load automatically as the user nears the bottom of the page, powered by an IntersectionObserver watching a sentinel element.
+- Infinite scroll — new images load automatically as the user nears the bottom of the page.
 - Random image feed on load, with duplicate-ID filtering so the same photo doesn't reappear as you scroll.
 
 **Search**
 - Keyword search against Unsplash's full photo library.
-- Paginated search results that keep loading via the same infinite-scroll mechanism once a search is active.
 
 **Viewing & sharing**
-- Click-to-expand lightbox modal for full-resolution viewing, closable via the "×" button, a click outside the image, or re-clicking.
 - One-click download button per image (fetches the full-resolution blob rather than just linking out).
 - Native share button using the Web Share API, with a graceful fallback alert on unsupported browsers.
 
