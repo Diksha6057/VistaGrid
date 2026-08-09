@@ -19,3 +19,38 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: var(--base-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+    overflow: auto;
+    position: relative;
+}
+#theme-switch {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--button-bg);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#theme-switch i {
+    margin-top: 8.5px;
+    font-size: 20px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+#theme-switch i:last-child {
+    display: none;
+}
+.darkmode #theme-switch i:first-child {
+    display: none;
+}
+.darkmode #theme-switch i:last-child {
+    display: block;
+}
