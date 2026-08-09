@@ -103,3 +103,54 @@ async function fetchImages(query = "", page = 1, retryCount = 0) {
         isFetching = false;
     }
 }
+function displayImages(images) {
+    images.forEach(photo => {
+        let div = document.createElement("div");
+        div.classList.add("photo");
+        let img = document.createElement("img");
+        img.src = photo.urls.small;
+        img.dataset.full = photo.urls.regular; 
+        img.loading = "lazy";
+        img.alt = photo.alt_description || "Unsplash Image";
+        let btn = document.createElement("a");
+        btn.classList.add("download-btn");
+        btn.innerHTML = '<i class="fa-solid fa-download"></i>';
+        btn.onclick = () => downloadImage(photo.urls.full);
+        let shareBtn = document.createElement("button");
+        shareBtn.classList.add("share-btn");
+        shareBtn.innerHTML = '<i class="fa-solid fa-share"></i>';
+        shareBtn.onclick = () => shareOnSocials(photo.urls.full, "Check out this amazing image!");
+        div.appendChild(img);
+        div.appendChild(btn);
+        div.appendChild(shareBtn);
+        gallery.appendChild(div);
+    });
+}
+function downloadImage(imageUrl) {
+    fetch(imageUrl)
+        .then(response => response.blob())
+        .then(blob => {
+            const blobUrl = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = blobUrl;
+            link.download = "image.jpg";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(blobUrl);
+        })
+        .catch(error => console.error("Error downloading the image:", error));
+}
+function shareOnSocials(imageUrl, text) {
+    let absoluteUrl = new URL(imageUrl, window.location.href).href;
+
+    if (navigator.share) {
+        navigator.share({
+            title: "VistaGrid Image",
+            text: text,
+            url: absoluteUrl
+        }).catch(err => console.error("Error sharing:", err));
+    } else {
+        alert("Sharing not supported on this browser.");
+    }
+}
