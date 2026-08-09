@@ -129,3 +129,13 @@ body {
     background-clip: text;
     color: transparent;
 }
+.container {
+    width: 90%;
+    min-height: 15vh;
+    padding: 20px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    margin-top: -50px;
+}
