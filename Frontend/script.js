@@ -154,3 +154,22 @@ function shareOnSocials(imageUrl, text) {
         alert("Sharing not supported on this browser.");
     }
 }
+searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const query = searchInput.value.trim();
+    if (query) {
+        fetchImages(query, 1);
+    }
+});
+const observer = new IntersectionObserver(async (entries) => {
+    if (entries[0].isIntersecting && !isFetching) {
+        if (isSearchMode && searchResults.length > 0) {
+            fetchImages(searchInput.value, currentSearchPage + 1);
+        } else {
+            fetchImages();
+        }
+    }
+}, { rootMargin: "200px" });
+const trigger = document.querySelector(".load-more-trigger");
+observer.observe(trigger);
+fetchImages();
