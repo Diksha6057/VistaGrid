@@ -11,6 +11,12 @@
 <body>
     <div class="loading">Loading...</div>
 
+    <div id="limit-banner" class="limit-banner">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>We're loading images faster than our photo service allows right now. Please check back in a little while!</span>
+        <button id="limit-banner-close" aria-label="Dismiss">&times;</button>
+    </div>
+
     <button id="theme-switch">
         <i class="fa-regular fa-sun"></i>
         <i class="fa-regular fa-moon"></i>
@@ -112,5 +118,8 @@
     </div>
 
     <div class="load-more-trigger"></div>
+
+    <script src="config.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
