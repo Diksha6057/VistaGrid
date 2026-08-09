@@ -212,3 +212,12 @@ body {
 .photo:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+.load-more-trigger {
+    height: 10px;
+    width: 100%;
+    background: transparent;
+}
+.loading {
+    text-align: center;
+    display: none;
+}
