@@ -333,3 +333,44 @@ body {
 .home-button:hover {
     background-color: #0056b3;
 }
+@media (max-width: 600px) {
+    .header {
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 10px;
+    }
+    .logo-container {
+        margin-top: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+    .logo-text {
+        font-size: 2rem;
+    }
+    .logo-box {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .container {
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+    .search-bar {
+        max-width: 100%;
+        min-height: 44px;
+        padding: 6px 14px;
+    }
+    .search-bar input {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+    #theme-switch {
+        top: 12px;
+        right: 12px;
+        height: 34px;
+        width: 34px;
+    }
+}
